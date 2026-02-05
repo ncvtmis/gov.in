@@ -1,4 +1,8 @@
+```
 theme: jekyll-theme-cayman
 title: e-Certificate Verification
+baseurl: "/gov.in"
 description: NCVT MIS e-Certificate Verification Replica
 permalink: pretty
+
+```
