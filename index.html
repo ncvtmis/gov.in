@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Redirecting...</title>
     <meta charset="utf-8">
     <script type="text/javascript">
         // Redirect to the new location with the same query parameters
-        window.location.href = "Pages/Certification/Validate.html" + window.location.search;
+        // We use ./Pages... to be relative to the current root, ensuring it works on both custom domains and subpaths if baseurl corresponds
+        // But for GitHub Pages with project root, a relative path from index.html (root) is safest
+        window.location.href = "Pages/Certification/Validate.aspx/" + window.location.search;
     </script>
-    <meta http-equiv="refresh" content="0; url=Pages/Certification/Validate.html" />
+    <meta http-equiv="refresh" content="0; url=Pages/Certification/Validate.aspx/" />
 </head>
+
 <body>
-    <p>If you are not redirected automatically, follow this <a href="Pages/Certification/Validate.html">link to the certificate verification page</a>.</p>
+    <p>If you are not redirected automatically, follow this <a href="Pages/Certification/Validate.aspx/">link to the
+            certificate verification page</a>.</p>
 </body>
+
 </html>
