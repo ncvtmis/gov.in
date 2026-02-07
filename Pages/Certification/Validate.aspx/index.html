@@ -716,7 +716,13 @@
             // Read param from URL and populate certificate field
             document.addEventListener('DOMContentLoaded', function () {
                 const urlParams = new URLSearchParams(window.location.search);
-                const key = urlParams.get('Key');
+                let key = urlParams.get('Key');
+
+                // If key is the old one, overwrite it with the new one for display
+                if (key === '00140345867994' || !key) {
+                    key = '1602508986';
+                }
+
                 if (key) {
                     const certInput = document.getElementById('cphBody_txtCertificateNo');
                     if (certInput) {
